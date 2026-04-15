@@ -14,7 +14,7 @@ const productImageMap = {
 export function getProductImage(product) {
   const nameKey = (product?.name || '').toLowerCase();
   const categoryKey = (product?.category || '').toLowerCase();
-  return productImageMap[nameKey] || productImageMap[categoryKey] || product?.imageUrl || productImageMap.default;
+  return product?.imageUrl || productImageMap.default;
 }
 
 export const homeBanner = "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1600&q=80";
