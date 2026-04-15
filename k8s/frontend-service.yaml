@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopsy-frontend
+  namespace: shopsy
+  annotations:
+    cloud.google.com/backend-config: '{"default": "shopsy-frontend-backendconfig"}'
+spec:
+  type: ClusterIP
+  selector:
+    app: shopsy-frontend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+      protocol: TCP

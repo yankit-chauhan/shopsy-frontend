@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopsy-frontend
+  namespace: shopsy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shopsy-frontend
+  template:
+    metadata:
+      labels:
+        app: shopsy-frontend
+    spec:
+      containers:
+        - name: shopsy-frontend
+          image: asia-south1-docker.pkg.dev/shopsy-nagp-2025/shopsy/shopsy-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
