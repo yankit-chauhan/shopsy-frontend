@@ -34,16 +34,19 @@ function Home() {
     <section className="stack-large">
       <section className="hero">
         <div className="hero-copy">
-          <span className="pill">Cloud Native Demo Store</span>
-          <h1>Discover products, search faster, and open rich product pages.</h1>
-          <p>This frontend showcases the complete demo journey for your deployed microservices: signup, login, search, and product details.</p>
+          <span className="pill">Online Shopping</span>
+          <h1>Find everyday essentials, premium gadgets, and style picks in one place.</h1>
+          <p>
+            Explore a curated shopping experience with fast product search, detailed product pages,
+            and a simple account flow to get started.
+          </p>
           <div className="hero-actions">
-            <Link className="primary-button" to="/search">Start shopping</Link>
+            <Link className="primary-button" to="/search">Shop now</Link>
             <Link className="secondary-button" to="/signup">Create account</Link>
           </div>
         </div>
         <div className="hero-visual">
-          <img src={homeBanner} alt="Shopping banner" />
+          <img src={homeBanner} alt="Online shopping banner" />
         </div>
       </section>
 
@@ -55,12 +58,15 @@ function Home() {
 
       <section className="promo-banner card">
         <div>
-          <span className="pill dark-pill">Featured Collection</span>
-          <h2>Built for your final demo</h2>
-          <p>Simple enough to present quickly, polished enough to look like a complete shopping UI.</p>
+          <span className="pill dark-pill">Featured Picks</span>
+          <h2>Fresh arrivals across mobiles, laptops, audio, and fashion</h2>
+          <p>
+            Browse popular categories, compare products quickly, and open detailed product pages
+            with pricing, stock, and descriptions.
+          </p>
           <Link className="primary-button" to="/search">Browse products</Link>
         </div>
-        <img src={secondaryBanner} alt="Featured shopping banner" />
+        <img src={secondaryBanner} alt="Featured shopping collection" />
       </section>
     </section>
   );
