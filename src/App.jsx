@@ -13,17 +13,40 @@ function Input({ label, value, onChange, type = 'text' }) {
 }
 
 function Header({ auth }) {
+
+  const isLoggedIn = !!auth.userEmail;
+
   return (
     <header className="header">
       <div className="header-inner">
-        <Link to="/" className="brand">Shopsy</Link>
+
+        <Link to="/" className="brand">
+          Shopsy
+        </Link>
+
         <nav className="nav">
+
           <Link to="/">Home</Link>
           <Link to="/search">Search</Link>
-          <Link to="/signup">Sign up</Link>
-          <Link to="/login">Login</Link>
-          {auth.userEmail ? <button className="ghost-button" onClick={auth.onLogout}>Logout ({auth.userEmail})</button> : null}
+
+          {!isLoggedIn && (
+            <>
+              <Link to="/signup">Sign up</Link>
+              <Link to="/login">Login</Link>
+            </>
+          )}
+
+          {isLoggedIn && (
+            <button
+              className="ghost-button"
+              onClick={auth.onLogout}
+            >
+              Logout ({auth.userEmail})
+            </button>
+          )}
+
         </nav>
+
       </div>
     </header>
   );
