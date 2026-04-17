@@ -58,7 +58,7 @@ function Home() {
       <section className="hero">
         <div className="hero-copy">
           <span className="pill">Online Shopping</span>
-          <h1>Find everyday essentials, premium gadgets, and style picks in one place.</h1>
+          <h1>Find everyday essentials, premium gadgets, and style picks in one place.Yankit Chauhan</h1>
           <p>
             Explore a curated shopping experience with fast product search, detailed product pages,
             and a simple account flow to get started.
