@@ -53,7 +53,6 @@ function Header({ auth }) {
 }
 
 function Home() {
-  const isLoggedIn = !!auth.userEmail;
   return (
     <section className="stack-large">
       <section className="hero">
@@ -66,11 +65,7 @@ function Home() {
           </p>
           <div className="hero-actions">
             <Link className="primary-button" to="/search">Shop now</Link>
-            {!isLoggedIn && (
-              <>
-                <Link className="secondary-button" to="/signup">Create account</Link>
-              </>
-            )}
+            <Link className="secondary-button" to="/signup">Create account</Link>
           </div>
         </div>
         <div className="hero-visual">
